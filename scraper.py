@@ -2,7 +2,7 @@ import requests, json, csv, os
 from config import URL
 from html_parser import extract_content
 
-def scrape_website():
+def scrape_website(URL):
     response = requests.get(URL)
     if response.status_code != 200:
         print("Failed to retrieve the page")
@@ -25,7 +25,7 @@ def save_to_csv(data, filename):
     print(f"Data saved to {filename}")
 
 if __name__ == "__main__":
-    html = scrape_website()
+    html = scrape_website(URL)
     if html:
         data = extract_content(html)
         save_to_json(data, "data/output.json")
