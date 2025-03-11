@@ -4,4 +4,4 @@ This is a simple web scraper that extracts content from a webpage and saves it i
 
 ## Requirements
 - Python 3.x
-- Install dependencies using:
+- Install dependencies using: `pip install -r requirements.txt`
